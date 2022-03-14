@@ -11,7 +11,7 @@ gulp.task('build', ['scripts', 'styles']);
  * Compile ts files
  */
 gulp.task('scripts', function(done) {
-    var ts = require('gulp-typescript');
+    var ts = require('grunt-ts');
     var tsProject = ts.createProject('tsconfig.json', { typescript: require('typescript') });
 
     var tsResult = gulp.src(['./**/*.ts','./**/*.tsx', '!./node_modules/**/*.ts','!./node_modules/**/*.tsx'], { base: '.' })
